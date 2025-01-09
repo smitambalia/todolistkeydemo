@@ -12,11 +12,15 @@ function App() {
     }
   }
 
+  function deleteTodo (id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+  
   return (
     <>
       <TodoInput onSubmit={addTodo}/>
 
-      <TodoList listOfTodos={todos}/>
+      <TodoList listOfTodos={todos} onDeleteTodo={deleteTodo}/>
 
     </>
   )
