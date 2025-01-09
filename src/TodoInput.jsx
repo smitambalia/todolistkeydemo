@@ -5,6 +5,7 @@ export default function TodoInput({onSubmit}) {
     function onFormSubmit(e) {
         e.preventDefault();
         onSubmit?.(inputValue);
+        setInputvalue('');
     }
     return (
         <>
