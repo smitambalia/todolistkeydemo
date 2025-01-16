@@ -4,7 +4,7 @@ import { TodoList } from './TodoList'
 import { useState } from 'react';
 
 function App() {
-  const [todos, setTodos] = useState([{ id : 1 , value : 'Learn React' }]);
+  const [todos, setTodos] = useState([]);
 
   function addTodo (value) {
     if(value) {
@@ -13,6 +13,7 @@ function App() {
   }
 
   function deleteTodo (id) {
+    console.log(todos);
     setTodos(todos.filter((todo) => todo.id !== id));
   }
   
